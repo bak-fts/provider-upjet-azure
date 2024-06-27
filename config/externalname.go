@@ -1236,7 +1236,7 @@ var TerraformPluginSDKExternalNameConfigs = map[string]config.ExternalName{
 	"azurerm_security_center_auto_provisioning": config.TemplatedStringAsIdentifier("", "/subscriptions/{{ .setup.configuration.subscription_id }}/providers/Microsoft.Security/autoProvisioningSettings/default"),
 	// The contact can be imported using the resource id
 	// /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Security/securityContacts/default1
-	"azurerm_security_center_contact": config.TemplatedStringAsIdentifier("", "/subscriptions/{{ .setup.configuration.subscription_id }}/providers/Microsoft.Security/securityContacts/default1"),
+	"azurerm_security_center_contact": config.TemplatedStringAsIdentifier("", "/subscriptions/{{ .setup.configuration.subscription_id }}/providers/Microsoft.Security/securityContacts/{{ .external_name }}"),
 	// DEPRECATED
 	// Server Vulnerability Assessments can be imported using the resource id
 	// /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource-group-name/providers/Microsoft.Compute/virtualMachines/vm-name/providers/Microsoft.Security/serverVulnerabilityAssessments/Default
